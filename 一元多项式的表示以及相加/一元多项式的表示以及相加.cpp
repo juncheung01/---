@@ -1,16 +1,15 @@
-//Ò»Ôª¶àÏîÊ½µÄ±íÊ¾ÒÔ¼°Ïà¼Ó
-//ÕÅ¿¡
-//141402054
+//ä¸€å…ƒå¤šé¡¹å¼çš„è¡¨ç¤ºä»¥åŠç›¸åŠ 
+
 #include<iostream>
 #include<stdlib.h>
 using namespace std;
 
 typedef struct LNode{
-	float coef;//ÏµÊı
-	int exp;//Ö¸Êı
+	float coef;//ç³»æ•°
+	int exp;//æŒ‡æ•°
 	struct LNode * next;
 } polynomial;
-//¶àÏîÊ½³õÊ¼»¯º¯Êı
+//å¤šé¡¹å¼åˆå§‹åŒ–å‡½æ•°
 polynomial *creat_poly(int n){
 	polynomial *L=(polynomial *)malloc(sizeof(LNode));
 	L->next=NULL;
@@ -82,11 +81,11 @@ void print_poly(polynomial * L){
 
 int main(){
 	int len1,len2;
-	cout<<"ÊäÈëÁ½¸ö¶àÏîÊ½µÄ³¤¶È"<<endl;
+	cout<<"è¾“å…¥ä¸¤ä¸ªå¤šé¡¹å¼çš„é•¿åº¦"<<endl;
 	cin>>len1>>len2;
-	cout<<"ÊäÈëµÚÒ»¸ö¶àÏîÊ½µÄÏµÊı£¬Ö¸Êı"<<endl;
+	cout<<"è¾“å…¥ç¬¬ä¸€ä¸ªå¤šé¡¹å¼çš„ç³»æ•°ï¼ŒæŒ‡æ•°"<<endl;
 	polynomial * a=creat_poly(len1);
-	cout<<"ÊäÈëµÚ¶ş¸ö¶àÏîÊ½µÄÏµÊı£¬Ö¸Êı"<<endl;
+	cout<<"è¾“å…¥ç¬¬äºŒä¸ªå¤šé¡¹å¼çš„ç³»æ•°ï¼ŒæŒ‡æ•°"<<endl;
 	polynomial *b=creat_poly(len2);
 	print_poly(add_poly(a,b));
 	return 0;
